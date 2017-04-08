@@ -61,12 +61,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-android listview 如何动态获取当前页面的头条目的item" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hao/2017/04/07/hello-world/" class="article-date">
-  <time datetime="2017-04-07T10:47:49.205Z" itemprop="datePublished">2017-04-07</time>
+    <a href="/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/" class="article-date">
+  <time datetime="2014-11-24T11:13:37.000Z" itemprop="datePublished">2014-11-24</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/hao/categories/原创/">原创</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -75,7 +79,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/hao/2017/04/07/hello-world/">Hello World</a>
+      <a class="article-title" href="/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/">android listview 如何动态获取当前页面的头条目的item</a>
     </h1>
   
 
@@ -83,22 +87,125 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>这段时间做了一个小东西，需要动态的获取当前个页面的第一个item 经过查找发现很少这方面的回答下面我就把我的方法写出来  大家可以看下。这里贴出部分代码 </p>
+<pre><code>listView.setOnScrollListener(new OnScrollListener() {
+@Override
+   public void onScrollStateChanged(AbsListView arg0, int arg1) {
+    // TODO Auto-generated method stub
+    }
+    @Override
+    public void onScroll(AbsListView arg0, int arg1, int arg2, int arg3) {
+    //在这里面打印arg1 发现他是随着你的滑动的变化而变化的，当第一个条目时是0，第一
+    //个划出后第二个到顶时时1  你们可以在这里面就行相应的操作
+    //调用了很多次
+}
+});
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pricnehao.github.io/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/" data-id="cj18x4sj30000t8jhqhbssuz1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/笔记/">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-轻量级数据库SharedPreferences的用法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hao/2014/11/13/轻量级数据库SharedPreferences的用法/" class="article-date">
+  <time datetime="2014-11-13T08:09:49.000Z" itemprop="datePublished">2014-11-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/hao/categories/Android/">Android</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hao/2014/11/13/轻量级数据库SharedPreferences的用法/">轻量级数据库SharedPreferences的用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  SharedPreferences 这个数据库，感觉还是比较好用的，他一般用来存储一些配置信息。下面我来写下SharedPreferences的创建及应用<br>   创建一个SharedPreferences数据库（数据库的名字为file）：<br>  SharedPreferences mySharedPreferences= getSharedPreferences(“file”,<br>      Activity.MODE_PRIVATE);<br>  //Activity.MODE_PRIVATE   这是个自带常量<br>  //Activity.MODE_PRIVATE  属性该文件只能被创建他的应用访问（控制访问权限）<br>  //Activity.MODE_APPEND 的功能是判断是否有该文件，如果有在后面添加，而不是擦除<br>  //实例化SharedPreferences.Editor对象<br>  SharedPreferences.Editor editor = mySharedPreferences.edit();</p>
+<p>  //数据的存入 用putString的方法保存数据<br>    editor.putString(“file_name”, “ying”); </p>
+<p>  //提交当前数据<br>    editor.commit(); </p>
+<p>  //获取存入的file_name 这个key下的数据<br>  String myname = mySharedPreferences.getString(“file_name”, “”);</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pricnehao.github.io/hao/2017/04/07/hello-world/" data-id="cj18vpdza0000jkjhpn9z0qlz" class="article-share-link">Share</a>
+      <a data-url="https://pricnehao.github.io/hao/2014/11/13/轻量级数据库SharedPreferences的用法/" data-id="cj18x4sjc0004t8jhn4f00xsk" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/笔记/">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-如何实现c中的密码加密功能" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hao/2013/05/26/如何实现c中的密码加密功能/" class="article-date">
+  <time datetime="2013-05-26T01:22:39.000Z" itemprop="datePublished">2013-05-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/hao/categories/c/">c</a>►<a class="article-category-link" href="/hao/categories/c/笔记/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/hao/2013/05/26/如何实现c中的密码加密功能/">如何实现c中的密码加密功能</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>#include
+int main()
+{
+char a;
+a=getch();
+printf(&quot;*&quot;);
+getch();
+return 0;
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pricnehao.github.io/hao/2013/05/26/如何实现c中的密码加密功能/" data-id="cj18x4sj80001t8jh0kothiuk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/c/">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/笔记/">笔记</a></li></ul>
+
     </footer>
   </div>
   
@@ -112,18 +219,39 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hao/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/hao/categories/c/">c</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/hao/categories/c/笔记/">笔记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/hao/categories/原创/">原创</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hao/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hao/tags/c/">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hao/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hao/tags/原创/">原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hao/tags/笔记/">笔记</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/hao/tags/Android/" style="font-size: 15px;">Android</a> <a href="/hao/tags/c/" style="font-size: 10px;">c</a> <a href="/hao/tags/java/" style="font-size: 10px;">java</a> <a href="/hao/tags/原创/" style="font-size: 10px;">原创</a> <a href="/hao/tags/笔记/" style="font-size: 20px;">笔记</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hao/archives/2017/04/">四月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hao/archives/2014/11/">十一月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/hao/archives/2013/05/">五月 2013</a></li></ul>
     </div>
   </div>
 
@@ -136,7 +264,15 @@
       <ul>
         
           <li>
-            <a href="/hao/2017/04/07/hello-world/">Hello World</a>
+            <a href="/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/">android listview 如何动态获取当前页面的头条目的item</a>
+          </li>
+        
+          <li>
+            <a href="/hao/2014/11/13/轻量级数据库SharedPreferences的用法/">轻量级数据库SharedPreferences的用法</a>
+          </li>
+        
+          <li>
+            <a href="/hao/2013/05/26/如何实现c中的密码加密功能/">如何实现c中的密码加密功能</a>
           </li>
         
       </ul>

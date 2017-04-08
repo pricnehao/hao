@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | princehao</title>
+  <title>android listview 如何动态获取当前页面的头条目的item | princehao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="princehao">
-<meta property="og:url" content="https://pricnehao.github.io/hao/archives/index.html">
+  <meta name="description" content="这段时间做了一个小东西，需要动态的获取当前个页面的第一个item 经过查找发现很少这方面的回答下面我就把我的方法写出来  大家可以看下。这里贴出部分代码  listView.setOnScrollListener(new OnScrollListener() { @Override    public void onScrollStateChanged(AbsListView arg0, int">
+<meta name="keywords" content="Android,原创,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android listview 如何动态获取当前页面的头条目的item">
+<meta property="og:url" content="https://pricnehao.github.io/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/index.html">
 <meta property="og:site_name" content="princehao">
+<meta property="og:description" content="这段时间做了一个小东西，需要动态的获取当前个页面的第一个item 经过查找发现很少这方面的回答下面我就把我的方法写出来  大家可以看下。这里贴出部分代码  listView.setOnScrollListener(new OnScrollListener() { @Override    public void onScrollStateChanged(AbsListView arg0, int">
+<meta property="og:updated_time" content="2017-04-08T06:51:33.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="princehao">
+<meta name="twitter:title" content="android listview 如何动态获取当前页面的头条目的item">
+<meta name="twitter:description" content="这段时间做了一个小东西，需要动态的获取当前个页面的第一个item 经过查找发现很少这方面的回答下面我就把我的方法写出来  大家可以看下。这里贴出部分代码  listView.setOnScrollListener(new OnScrollListener() { @Override    public void onScrollStateChanged(AbsListView arg0, int">
   
     <link rel="alternate" href="/atom.xml" title="princehao" type="application/atom+xml">
   
@@ -59,87 +64,74 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/hao/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/" class="archive-article-date">
-  <time datetime="2014-11-24T11:13:37.000Z" itemprop="datePublished">11月 24</time>
+        <section id="main"><article id="post-android listview 如何动态获取当前页面的头条目的item" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/" class="article-date">
+  <time datetime="2014-11-24T11:13:37.000Z" itemprop="datePublished">2014-11-24</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/hao/categories/原创/">原创</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/">android listview 如何动态获取当前页面的头条目的item</a>
+    <h1 class="article-title" itemprop="name">
+      android listview 如何动态获取当前页面的头条目的item
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/hao/2014/11/13/轻量级数据库SharedPreferences的用法/" class="archive-article-date">
-  <time datetime="2014-11-13T08:09:49.000Z" itemprop="datePublished">11月 13</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hao/2014/11/13/轻量级数据库SharedPreferences的用法/">轻量级数据库SharedPreferences的用法</a>
-    </h1>
-  
+        <p>这段时间做了一个小东西，需要动态的获取当前个页面的第一个item 经过查找发现很少这方面的回答下面我就把我的方法写出来  大家可以看下。这里贴出部分代码 </p>
+<pre><code>listView.setOnScrollListener(new OnScrollListener() {
+@Override
+   public void onScrollStateChanged(AbsListView arg0, int arg1) {
+    // TODO Auto-generated method stub
+    }
+    @Override
+    public void onScroll(AbsListView arg0, int arg1, int arg2, int arg3) {
+    //在这里面打印arg1 发现他是随着你的滑动的变化而变化的，当第一个条目时是0，第一
+    //个划出后第二个到顶时时1  你们可以在这里面就行相应的操作
+    //调用了很多次
+}
+});
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pricnehao.github.io/hao/2014/11/24/android listview 如何动态获取当前页面的头条目的item/" data-id="cj18x4sj30000t8jhqhbssuz1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hao/tags/笔记/">笔记</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/hao/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/hao/2013/05/26/如何实现c中的密码加密功能/" class="archive-article-date">
-  <time datetime="2013-05-26T01:22:39.000Z" itemprop="datePublished">5月 26</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hao/2013/05/26/如何实现c中的密码加密功能/">如何实现c中的密码加密功能</a>
-    </h1>
+    <a href="/hao/2014/11/13/轻量级数据库SharedPreferences的用法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          轻量级数据库SharedPreferences的用法
+        
+      </div>
+    </a>
   
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
